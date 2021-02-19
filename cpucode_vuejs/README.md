@@ -17,10 +17,18 @@ npm install vue --save
 
 ## 文件目录 
 
-- [Demo__vue渲染](src/main/webapp/com/cpucode/first/Demo.html)
-- [Binding__双向绑定](src/main/webapp/com/cpucode/first/Binding.html)
-- [Event__事件处理](src/main/webapp/com/cpucode/first/Event.html)
-- [lifecycle__钩子函数](src/main/webapp/com/cpucode/lifecycle/lifecycle.html)
+
+------------------
+
+- [入门](src/main/webapp/com/cpucode/first)
+
+- [x] [Demo__vue渲染](src/main/webapp/com/cpucode/first/Demo.html)
+- [x] [Binding__双向绑定](src/main/webapp/com/cpucode/first/Binding.html)
+- [x] [Event__事件处理](src/main/webapp/com/cpucode/first/Event.html)
+
+- [Vue实例](src/main/webapp/com/cpucode/lifecycle)
+
+- [x] [lifecycle__钩子函数](src/main/webapp/com/cpucode/lifecycle/lifecycle.html)
 
 
 ----------------

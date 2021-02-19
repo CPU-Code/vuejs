@@ -1,0 +1,38 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 20:33
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钩子函数</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+    </div>
+
+    <script type="text/javascript">
+        let app = new Vue({
+            el:"#app",
+            data:{
+                //初始化为空
+                msg:""
+            },
+            //钩子函数
+            created(){
+                //this 就是当前的Vue实例
+                this.msg = "cpucode vue. created";
+
+                console:log(this);
+            }
+        });
+    </script>
+</body>
+</html>
