@@ -1,0 +1,47 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 23:01
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历对象</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(user, index) in users" :key="index">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul>
+            <li v-for="(value, key, index) in person">
+                {{index}} -- {{key}} -- {{value}}
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el:"#app",
+            data:{
+                users:[
+                    {"name" : "cpu", "age": 11, "gender" : "男"},
+                    {"name" : "cpuCOde", "age": 33, "gender" : "女"},
+                    {"name" : "hha" , "age" : 122, "gender" : "已知"}
+                ],
+                person:{"name" : "雅美蝶", "age" : 66, "address" : "日本"}
+            }
+        });
+    </script>
+</body>
+</html>
