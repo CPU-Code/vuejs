@@ -1,0 +1,37 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 20:54
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-text和v-html</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 将数据输出到元素内部，如果输出的数据有HTML代码，会作为普通文本输出 -->
+        v-text:<span v-text="msg"></span>
+        <br>
+
+        <!-- 将数据输出到元素内部，如果输出的数据有HTML代码，会被渲染 -->
+        v-html:<span v-html="msg"></span>
+        <br>
+
+    </div>
+
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                msg:"<h2>haha cpucode</h2>"
+            }
+        });
+    </script>
+</body>
+</html>
