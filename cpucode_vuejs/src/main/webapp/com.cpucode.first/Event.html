@@ -1,0 +1,39 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 17:38
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理</title>
+    <script src="../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="num">
+
+        <!--v-on 指令绑定点击事件, 直接操作num-->
+        <button v-on:click="num++">戳我呀</button>
+
+        <h2>
+            {{name}} 哇塞了
+             {{num}} D
+        </h2>
+    </div>
+
+    <script>
+        var app= new Vue({
+            el:"#app",
+            data: {
+                name: "cpuCode",
+                num: 1
+            }
+        });
+    </script>
+</body>
+</html>

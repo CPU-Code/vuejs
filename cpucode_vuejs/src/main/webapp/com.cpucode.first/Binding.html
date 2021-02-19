@@ -1,0 +1,39 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 17:31
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+    <script src="../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 页面中有一个 input 元素，通过 v-model 与 num 进行绑定 -->
+        <input type="text" v-model="num">
+
+        <!-- 通过 {{num}} 在页面输出 -->
+        <h2>
+            {{name}} 哇塞
+            有 {{num}} 个猴赛雷
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            //data添加了新的属性： num
+            data: {
+                name: "cpuCode",
+                num: 1
+            }
+        });
+    </script>
+</body>
+</html>
