@@ -1,0 +1,82 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 22:24
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件修饰符</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--直接写js片段-->
+        <button @click="num++">增加</button>
+        <!--使用函数名，该函数必须要在vue实例中定义-->
+        <button @click="decrement">减少</button>
+
+        <h2>
+            num = {{num}}
+        </h2>
+
+        <hr>
+            事件冒泡:
+        <br>
+
+        <div style="background-color: lightcoral; width: 100px; height: 200px"
+             @click="print('你被点击了 div')">
+            <button @click="print('点击了 button')">点我试试</button>
+        </div>
+
+        <hr>
+        阻止事件冒泡:
+        <br>
+
+        <div style="background-color: lightcoral; width: 100px; height: 200px"
+             @click="print('你被点击了 div')">
+            <!-- .stop ：阻止事件冒泡 -->
+            <button @click.stop="print('点击了 button')">点我试试</button>
+        </div>
+
+
+        <br>
+            默认事件：
+        <br>
+
+        <a href="https://github.com/CPU-Code" @click="print('点击了链接')">
+            cpuCode
+        </a>
+
+        <br>
+            阻止默认事件：
+        <br>
+
+        <!-- .prevent ：阻止默认事件发生 -->
+        <a href="https://github.com/CPU-Code" @click.prevent="print('点击了链接')">
+            cpuCode
+        </a>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                num:1
+            },
+            methods:{
+                decrement() {
+                    this.num--;
+                },
+                print(msg){
+                    console.log(msg)
+                }
+            }
+        });
+    </script>
+</body>
+</html>
