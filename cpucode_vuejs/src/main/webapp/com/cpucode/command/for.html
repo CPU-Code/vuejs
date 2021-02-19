@@ -1,0 +1,43 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 22:49
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历数组</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!--
+            users ：要遍历的数组
+            user ：循环变量
+            -->
+            <li v-for="user in users">
+                {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let app = new Vue({
+            //el即element，要渲染的页面元素
+            el:"#app",
+            data:{
+                users:[
+                    {"name" : "cpu", "age" : 11, "gender" : "女"},
+                    {"name" : "cpuCode", "age" : 22, "gender" : "男"},
+                    {"name" : "hahha", "age" : 100, "gender" : "未知"}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

@@ -40,6 +40,7 @@ npm install vue --save
 - [x] [model__双向绑定](src/main/webapp/com/cpucode/command/model.html)
 - [x] [on__绑定事件](src/main/webapp/com/cpucode/command/on.html)
 - [x] [modifier__事件修饰符](src/main/webapp/com/cpucode/command/modifier.html)
+- [x] [for__遍历数组](src/main/webapp/com/cpucode/command/for.html)
 
 ----------------
 
