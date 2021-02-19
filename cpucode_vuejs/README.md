@@ -1,5 +1,5 @@
 
-# vuejs
+# [vuejs](../README.md)
 
 安装Vue，输入命令：
 
@@ -17,8 +17,9 @@ npm install vue --save
 
 ## 文件目录 
 
-- [vue](cpucode_vuejs/README.md)
+- [demo__第一个程序](src/main/webapp/com.cpucode.first/demo.html)
 
-----
+
+----------------
 
 

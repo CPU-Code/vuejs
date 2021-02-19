@@ -1,0 +1,35 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 17:14
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue js 测试</title>
+    <script src="../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--{{name}}的方式，来渲染刚刚定义的name属性-->
+        <h2>{{name}} 哇塞</h2>
+    </div>
+
+    <script>
+        // new Vue()来创建Vue实例
+        var app = new Vue({
+            //el：是element的缩写，通过id选中要渲染的页面元素
+            el:"#app",
+            //data：数据，数据是一个对象，里面有很多属性，都可以渲染到视图中
+            data: {
+                //name：这里指定了一个name属性
+                name:"cpuCode"
+            }
+        });
+    </script>
+</body>
+</html>
