@@ -37,7 +37,7 @@ npm install vue --save
 ## [命令](src/main/webapp/com/cpucode/command)
 
 - [x] [vTestHtml__v-text和v-html](src/main/webapp/com/cpucode/command/vTestHtml.html)
-
+- [x] [model__双向绑定](src/main/webapp/com/cpucode/command/model.html)
 
 ----------------
 

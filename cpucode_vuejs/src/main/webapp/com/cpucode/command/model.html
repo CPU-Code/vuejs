@@ -1,0 +1,36 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/19
+  @time : 21:07
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向绑定</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" value="Java" v-model="language"> java <br>
+        <input type="checkbox" value="Python" v-model="language"> Python <br>
+        <input type="checkbox" value="C++" v-model="language"> C++ <br>
+
+        <h2>
+            你选择了 : {{language.join(", ")}}
+        </h2>
+    </div>
+
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                language:[]
+            }
+        });
+    </script>
+</body>
+</html>
