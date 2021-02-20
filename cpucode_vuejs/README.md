@@ -48,7 +48,7 @@ npm install vue --save
 - [x] [ifElse__if连续](src/main/webapp/com/cpucode/command/ifElse.html)
 - [x] [show__元素隐藏](src/main/webapp/com/cpucode/command/show.html)
 - [x] [bind__Vue数据](src/main/webapp/com/cpucode/command/bind.html)
-
+- [x] [computed__数据处理](src/main/webapp/com/cpucode/command/computed.html)
 
 
 ----------------

@@ -1,0 +1,49 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 10:41
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据处理</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>
+            你的生日:{{new Date(birthday).getFullYear()}} -
+                    {{new Date(birthday).getMonth() + 1}} -
+                    {{new Date(birthday).getDay()}}
+        </h2>
+
+        <hr>
+        <h2>
+            computed计算 你的生日: {{birth}}
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                birthday: 6666666666665
+            },
+
+            computed:{
+                birth(){
+                    const date = new Date(this.birthday);
+
+                    return date.getFullYear() + "-" +
+                            (date.getMonth() + 1) + "-" +
+                            date.getDay();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
