@@ -57,7 +57,8 @@ npm install vue --save
 
 - [x] [global__全局组件](src/main/webapp/com/cpucode/assembly/global.html)
 - [x] [local__局部注册](src/main/webapp/com/cpucode/assembly/local.html)
-- [x] [props__父向子](src/main/webapp/com/cpucode/assembly/props.html)
+- [x] [props__父向子传递](src/main/webapp/com/cpucode/assembly/props.html)
+- [x] [Arrayprops__父数组向子传递](src/main/webapp/com/cpucode/assembly/Arrayprops.html)
 
 ----------------
 

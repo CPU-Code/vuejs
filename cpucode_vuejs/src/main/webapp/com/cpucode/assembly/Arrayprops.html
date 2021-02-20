@@ -1,0 +1,65 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 14:14
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父数组向子传递</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>CpuCode</h2>
+        <!-- 接受来自父组件的属性值，使用 v-bind 指向父组件的属性lessons；注意使用my-list -->
+        <my-list :cpus = "lessons"></my-list>
+    </div>
+
+    <script>
+        //定义组件
+        const myList = {
+            //可以使用双引号、单引号或者如下使用的 ` 飘号
+            template:`
+                <ul>
+                    <li v-for="cpu in cpus" :key="cpu.id">
+                    {{cpu.id}} -- {{cpu.name}}
+                    </li>
+                </ul>
+            `,
+
+            //定义接收来自父组件的属性
+            props:{
+                //定义模版中使用的属性
+                cpus:{
+                    //必须为数组类型
+                    type:Array,
+                    //默认为空数组
+                    default:[]
+                }
+            }
+        };
+
+        var app = new Vue({
+            el:"#app",
+            data:{
+                msg:"父组件中的msg属性的内容",
+                lessons:[
+                    {"id": 1, "name": "java"},
+                    {"id": 2, "name": "python"}
+                ]
+            },
+
+            //注册组件
+            components:{
+                //如果组件key和value一致可以简写如下
+                myList
+            }
+        });
+    </script>
+</body>
+</html>
