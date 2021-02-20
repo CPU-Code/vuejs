@@ -56,7 +56,7 @@ npm install vue --save
 ## [命令](src/main/webapp/com/cpucode/assembly)
 
 - [x] [global__全局组件](src/main/webapp/com/cpucode/assembly/global.html)
-
+- [x] [local__局部注册](src/main/webapp/com/cpucode/assembly/local.html)
 
 ----------------
 

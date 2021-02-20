@@ -1,0 +1,44 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 12:54
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>局部注册</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--使用定义好的全局组件-->
+        <counter></counter>
+        <counter></counter>
+        <counter></counter>
+    </div>
+
+    <script>
+        //定义组件
+        const counter = {
+            template : "<button @click='num++'>你点击了{{num}}次</button>",
+            data(){
+                return {
+                    num :0
+                }
+            }
+        };
+
+        var app = new Vue({
+            el:"#app",
+            //局部注册组件
+            components:{
+                counter:counter
+            }
+        });
+    </script>
+</body>
+</html>
