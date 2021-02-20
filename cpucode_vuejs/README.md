@@ -14,6 +14,9 @@ npm init -y
 npm install vue --save
 ```
 
+```bash
+npm install axios
+```
 
 ## 文件目录 
 
@@ -60,6 +63,10 @@ npm install vue --save
 - [x] [props__父向子传递](src/main/webapp/com/cpucode/assembly/props.html)
 - [x] [Arrayprops__父数组向子传递](src/main/webapp/com/cpucode/assembly/Arrayprops.html)
 - [x] [emit__子向父的通信](src/main/webapp/com/cpucode/assembly/emit.html)
+
+-------------------
+
+## [ajax](src/main/webapp/com/cpucode/ajax/ajax.html)
 
 ----------------
 
