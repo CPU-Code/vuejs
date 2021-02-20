@@ -1,0 +1,51 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 9:11
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if连续</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="show = !show">点我</button>
+        <h2 v-if="show">
+            cpucode 哈哈
+        </h2>
+
+        <hr>
+        <ul>
+            <li v-for="(user, index) in users"
+                v-if="user.gender == '女'"
+                style="background-color: deeppink">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+
+            <li v-else style="background-color: blue">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show:true,
+                users:[
+                    {"name" : "cpu", "age" : 22, "gender" : "女"},
+                    {"name" : "cpuCode", "age" : 33, "gender" : "男"},
+                    {"name" : "哇啊哇", "age" : 44, "gender" : "神秘兮兮"}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
