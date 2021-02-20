@@ -1,0 +1,36 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 8:51
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件判断</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="show = !show">戳我</button>
+
+        <!-- 为true时，所在的元素才会被渲染 -->
+        <h2 v-if="show">
+            haha cpuCode
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            //el即element，要渲染的页面元素
+            el:"#app",
+            data:{
+                show:true
+            }
+        });
+    </script>
+</body>
+</html>

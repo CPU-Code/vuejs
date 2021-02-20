@@ -43,6 +43,10 @@ npm install vue --save
 - [x] [for__遍历数组](src/main/webapp/com/cpucode/command/for.html)
 - [x] [index__数组角标](src/main/webapp/com/cpucode/command/index.html)
 - [x] [forObject__遍历对象](src/main/webapp/com/cpucode/command/forObject.html)
+- [x] [if__条件判断](src/main/webapp/com/cpucode/command/if.html)
+- [x] [ifFor__遍历再判断](src/main/webapp/com/cpucode/command/ifFor.html)
+- [x] [ifElse__if连续](src/main/webapp/com/cpucode/command/ifElse.html)
+- [x] [show__元素隐藏](src/main/webapp/com/cpucode/command/show.html)
 
 ----------------
 
