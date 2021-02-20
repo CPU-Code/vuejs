@@ -51,6 +51,13 @@ npm install vue --save
 - [x] [computed__数据处理](src/main/webapp/com/cpucode/command/computed.html)
 - [x] [watch__监控](src/main/webapp/com/cpucode/command/watch.html)
 
+-------------------
+
+## [命令](src/main/webapp/com/cpucode/assembly)
+
+- [x] [global__全局组件](src/main/webapp/com/cpucode/assembly/global.html)
+
+
 ----------------
 
 
