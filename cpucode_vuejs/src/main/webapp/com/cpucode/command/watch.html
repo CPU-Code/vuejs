@@ -1,0 +1,56 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 10:58
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>监控</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="message">
+
+        <hr><br>
+        <input v-model="person.name"><br>
+        <input v-model="person.age">
+        <button @click="person.age++"> + </button>
+
+        <h2>
+            姓名为：{{person.name}} , 年龄为：{{person.age}}
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:"cpuCode 万岁",
+                person:{"name" : "cpucode", "age": 11}
+            },
+
+            watch:{
+                message(newValue, oldValue){
+                    console.log("新值：" + nuwValue + " , 旧值 : " + oldValue);
+                },
+
+                person: {
+                    //开启深度监控，可以监控到对象属性值的变化
+                    deep: true ,
+
+                    //监控的处理方法
+                    handler(obj){
+                        console.log("name = " + obj.name + ", age = " + obj.age);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
