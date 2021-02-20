@@ -1,0 +1,47 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 9:05
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历再判断</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="show = !show">戳我</button>
+
+        <h2 v-if="show">
+            来呀, 打我呀
+        </h2>
+
+        <hr>
+        <ul>
+            <li v-for="(user, index) in users" v-if="user.gender == '男'">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show:true,
+                users:[
+                    {"name":"cpu", "age":8, "gender" : "女"},
+                    {"name":"cpuCode", "age": 11, "gender" : "男"},
+                    {"name" : "哈哈", "ager": 33, "gender" : "未知"}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
