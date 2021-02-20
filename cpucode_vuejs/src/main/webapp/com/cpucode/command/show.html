@@ -1,0 +1,56 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 9:19
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素隐藏</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="show = !show">点呀</button>
+        <h2 v-if="show">
+            哇啊 cpuCode
+        </h2>
+
+        <hr>
+        <ul v-if="show">
+            <li v-for="(user, index) in users"
+                v-if="user.gender == '女'"
+                style="background-color: deeppink">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+
+            <li v-else style="background-color: springgreen">
+                {{index}} -- {{user.name}} -- {{user.age}} -- {{user.gender}}
+            </li>
+        </ul>
+
+        <hr>
+        <h2 v-show="show">
+            哇啊哇 好欧巴
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                show:true,
+                users:[
+                    {"name" : "哇哦", "age": 33, "gender": "男"},
+                    {"name":"cpu", "age": 44, "gender": "女"},
+                    {"name": "你好", "age": 88, "gender": "男"}
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
