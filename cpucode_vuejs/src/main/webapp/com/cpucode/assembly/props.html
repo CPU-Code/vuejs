@@ -1,0 +1,43 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 14:09
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:introduce="http://www.w3.org/1999/xlink">
+<head>
+    <meta charset="UTF-8">
+    <title>父向子传递</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--使用定义好的全局组件-->
+        <introduce :title = "msg"></introduce>
+    </div>
+
+    <script>
+        //定义组件
+        const introduce = {
+            //使用props属性title的值渲染模版
+            template:"<h2>{{title}}</h2>",
+            //定义接收来自父组件的属性
+            props: ["title"]
+        };
+
+        //全局注册组件；参数1：组件名称，参数2：组件
+        Vue.component("introduce", introduce);
+
+        var app = new Vue({
+            el:"#app",
+
+            data:{
+                msg: "父组件中的msg属性的内容"
+            }
+        })
+    </script>
+</body>
+</html>
