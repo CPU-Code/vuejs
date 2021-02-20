@@ -1,0 +1,66 @@
+<!--
+  @dauthor : cpucode
+  @date : 2021/2/20
+  @time : 15:10
+  @github : https://github.com/CPU-Code
+  @csdn : https://blog.csdn.net/qq_44226094
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子向父的通信</title>
+    <script src="../../../../../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>num = {{num}}</h2>
+        <!--使用定义好的全局组件-->
+        <counter @plus = "numPlus" @reduce="numReduce" :snum="num"></counter>
+    </div>
+
+    <script>
+        //定义组件
+        const counter = {
+            //组件只能是一个元素里面包裹其他元素；如下面，一个div包含两个按钮
+            template:`
+                <div>
+                    <button @click="incrNum"> + </button>
+                    <button @click="decrNum"> - </button>
+                </div>
+            `,
+
+            props:["snum"],
+            methods:{
+                //点击模板中使用的方法
+                incrNum(){
+                    return this.$emit("plus");
+                },
+                decrNum(){
+                    return this.$emit("reduce");
+                }
+            }
+        };
+
+        //全局注册组件；参数1：组件名称，参数2：组件
+        Vue.component("counter", counter);
+
+        var app = new Vue({
+            el:"#app",
+            data:{
+                num: 0
+            },
+            methods: {
+                //父组件中定义操作num的方法
+                numPlus(){
+                    this.num++;
+                },
+                numReduce(){
+                    this.num--;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
